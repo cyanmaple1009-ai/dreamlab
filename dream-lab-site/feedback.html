@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>反馈通道 · 梦境研究所</title>
+<meta name="description" content="梦境研究所反馈通道：规则平衡问题、梦境设定建议、实验事故报告、伦理申诉、入所申请转交与一般咨询。含受理流程、时限承诺与联系方式。">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-accent="magenta">
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html" aria-label="梦境研究所 首页">
+      <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.2" stroke="currentColor" stroke-width="1.1" opacity=".28"/><path d="M6.4 16h19.2" stroke="currentColor" stroke-width="1.1" opacity=".45"/><circle cx="16" cy="16" r="4.1" fill="currentColor"/></svg>
+      <span class="brand__text">
+        <span class="brand__cn">梦境研究所</span>
+        <span class="brand__en">Dream Research Institute</span>
+      </span>
+    </a>
+    <button class="nav__toggle" type="button" aria-label="展开导航菜单" aria-expanded="false"><span></span></button>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="about.html">研究所介绍</a>
+      <a class="nav__link" href="admissions.html">招生信息</a>
+      <a class="nav__link" href="dream-science.html">梦境科普</a>
+      <a class="nav__link" href="feedback.html" aria-current="page">反馈通道</a>
+    </nav>
+    <a class="nav__cta" href="#form">填写反馈</a>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<!-- ============================ 页头 ============================ -->
+<section class="phead">
+  <div class="gridlines" aria-hidden="true"></div>
+  <div class="wrap phead__inner">
+    <nav class="breadcrumb" aria-label="面包屑">
+      <a href="index.html">首页</a><span class="sep">/</span><span>反馈通道</span>
+    </nav>
+    <h1>
+      你的每一次反馈，<br>都是我们的<span style="color:var(--accent)">一次观测</span>。
+      <span class="en">Feedback Channel</span>
+    </h1>
+    <p class="phead__lede">
+      无论是规则平衡问题、梦境设定建议、实验事故报告，还是想说一句「你们这个部门设置不太合理」——
+      都可以从下面的表单递交。所有递交都会获得一个不可回收的受理编号，并由伦理与合规部按类别分派。
+    </p>
+    <div class="phead__meta">
+      <span class="chip chip--accent">首次答复 ≤ 5 个工作日</span>
+      <span class="chip">支持匿名递交</span>
+      <span class="chip">受理编号不可回收</span>
+    </div>
+  </div>
+</section>
+
+<div class="subnav">
+  <div class="wrap subnav__inner">
+    <a href="#form">填写反馈</a>
+    <a href="#process">受理流程</a>
+    <a href="#channels">联系方式</a>
+    <a href="#conduct">行为准则</a>
+    <a href="#ethics">知情同意与隐私</a>
+    <a href="#faq">反馈常见问题</a>
+  </div>
+</div>
+
+<!-- ============================ 表单 ============================ -->
+<section class="section" id="form">
+  <div class="wrap">
+    <div class="form-shell">
+
+      <!-- 表单主体 -->
+      <div class="form reveal">
+        <div class="form__head">
+          <h2>反馈受理单</h2>
+          <p>带 <span style="color:var(--magenta)">*</span> 的为必填项。递交后请记下受理编号，后续催办需凭编号。</p>
+        </div>
+
+        <form id="feedback-form" novalidate>
+          <div class="form__body">
+
+            <div id="form-error" role="alert" style="display:none;padding:13px 16px;border:1px solid rgba(240,101,79,.35);border-left:3px solid var(--rose);border-radius:10px;background:rgba(240,101,79,.06);color:#b8402c;font-size:14px"></div>
+
+            <!-- 类别 -->
+            <div class="field">
+              <label id="lbl-kind">反馈类别 <span class="req">*</span></label>
+              <div class="choice-grid" role="radiogroup" aria-labelledby="lbl-kind">
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="规则与平衡问题" required data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">规则与平衡问题<small>Rules &amp; Balance</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="梦境设定建议" data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">梦境设定建议<small>Setting Suggestion</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="实验事故报告" data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">实验事故报告<small>Incident Report</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="伦理申诉" data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">伦理申诉<small>Ethics Complaint</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="入所申请转交" data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">入所申请转交<small>Admission Forwarding</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-kind" value="一般咨询" data-group-label="反馈类别">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">一般咨询<small>General Enquiry</small></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 紧急度 -->
+            <div class="field">
+              <label id="lbl-prio">紧急程度 <span class="req">*</span></label>
+              <div class="choice-grid" role="radiogroup" aria-labelledby="lbl-prio" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))">
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-priority" value="普通" checked required data-group-label="紧急程度">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">普通<small>≤ 5 个工作日</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-priority" value="加急" data-group-label="紧急程度">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">加急<small>≤ 48 小时</small></span>
+                </label>
+                <label class="choice choice--radio">
+                  <input type="radio" name="fb-priority" value="事故级" data-group-label="紧急程度">
+                  <span class="choice__box" aria-hidden="true"></span>
+                  <span class="choice__label">事故级<small>立即转现场</small></span>
+                </label>
+              </div>
+              <span class="hint">若正在发生伤害或受试者安全受威胁，请选择「事故级」，并同时拨打下方事故专线。</span>
+            </div>
+
+            <!-- 标题 -->
+            <div class="field">
+              <label for="fb-subject">标题 <span class="req">*</span><span class="en">Subject</span></label>
+              <input class="input" id="fb-subject" name="subject" type="text" maxlength="80"
+                     placeholder="一句话说清问题，例如：卡牌战斗的先攻顺序存在歧义"
+                     required data-label="标题">
+            </div>
+
+            <!-- 正文 -->
+            <div class="field">
+              <label for="fb-message">详细内容 <span class="req">*</span><span class="en">Details</span></label>
+              <textarea class="textarea" id="fb-message" name="message" maxlength="2000"
+                        placeholder="请尽量具体。如果涉及规则，请引用具体条目与位置；如果涉及梦境现象，请描述场景、时间与在场人员。&#10;&#10;提示：一次没有好好记录的事故，等于没有发生。"
+                        required data-label="详细内容"></textarea>
+              <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+                <span class="hint">建议包含：发生时间 / 涉及条目 / 你的预期 / 实际结果</span>
+                <span class="hint mono" id="char-count">0 / 2000</span>
+              </div>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="field">
+              <label>联系方式 <span class="en">Contact</span></label>
+              <div class="field-row">
+                <div class="field" style="gap:7px">
+                  <label for="fb-name" style="font-weight:400;font-size:13px;color:var(--ink-3)">称呼 / 在册编号</label>
+                  <input class="input" id="fb-name" name="name" type="text" maxlength="40" placeholder="例：李华 或 在册编号 DRI-01234">
+                </div>
+                <div class="field" style="gap:7px">
+                  <label for="fb-email" style="font-weight:400;font-size:13px;color:var(--ink-3)">邮箱（用于接收答复）</label>
+                  <input class="input" id="fb-email" name="email" type="email" placeholder="you@example.com">
+                </div>
+              </div>
+              <span class="hint">若选择匿名递交，请勿填写任何可识别你身份的信息。</span>
+            </div>
+
+            <!-- 匿名 -->
+            <label class="check">
+              <input type="checkbox" id="fb-anon" name="anonymous">
+              <span class="check__box" aria-hidden="true"></span>
+              <span>我希望匿名递交。我理解匿名件无法接收处理结果反馈，且无法作为申诉的后续依据。</span>
+            </label>
+
+            <!-- 声明 -->
+            <div class="field" style="gap:12px">
+              <label>递交声明 <span class="req">*</span></label>
+
+              <label class="check">
+                <input type="checkbox" name="truth" required
+                       data-label="「内容真实性」声明">
+                <span class="check__box" aria-hidden="true"></span>
+                <span>我确认本单所述内容真实，未包含任何他人未经同意的隐私信息，也未捏造实验事故。<span style="color:var(--magenta)">*</span></span>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="consent" required
+                       data-label="「隐私与处理」同意书">
+                <span class="check__box" aria-hidden="true"></span>
+                <span>我已阅读并同意《反馈材料处理与隐私说明》，同意档案与数据部按受试者级标准保管本单材料。<span style="color:var(--magenta)">*</span></span>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="newsletter">
+                <span class="check__box" aria-hidden="true"></span>
+                <span>我愿意接收研究所的公开年报与招募批次通知。（可不选）</span>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="form__foot">
+            <span class="note">递交即生成受理编号。本站为虚构设定站，表单不会向任何服务器发送数据。</span>
+            <button class="btn btn--accent" type="submit">
+              递交反馈
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- 递交成功 -->
+        <div class="form-done" id="form-done" role="status" aria-live="polite">
+          <div class="form-done__ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
+          </div>
+          <h3>反馈已受理</h3>
+          <p>感谢你的记录。档案与数据部已完成编号归档，伦理与合规部将在承诺时限内给出首次答复。请妥善保存下方受理编号。</p>
+
+          <div class="receipt">
+            <div><span class="k">受理编号</span><span class="v" id="rc-id">—</span></div>
+            <div><span class="k">类别</span><span class="v" id="rc-kind">—</span></div>
+            <div><span class="k">紧急程度</span><span class="v" id="rc-prio">—</span></div>
+            <div><span class="k">递交方式</span><span class="v" id="rc-anon">—</span></div>
+            <div><span class="k">递交时间</span><span class="v" id="rc-time">—</span></div>
+          </div>
+
+          <div class="mt-l" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <button class="btn btn--ghost" type="button" id="form-again">再递交一份</button>
+            <a class="btn btn--primary" href="index.html">返回首页</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side">
+        <div class="side-block reveal">
+          <h4>受理时限承诺</h4>
+          <ul class="side-list">
+            <li><span class="k">普通</span><span class="v">5 个工作日内首次答复</span></li>
+            <li><span class="k">加急</span><span class="v">48 小时内首次答复</span></li>
+            <li><span class="k">事故级</span><span class="v">立即转现场值班主管</span></li>
+            <li><span class="k">伦理申诉</span><span class="v">15 个工作日内给出复核结论</span></li>
+            <li><span class="k">入所申请转交</span><span class="v">7 个工作日内分配受理编号</span></li>
+          </ul>
+        </div>
+
+        <div class="side-block reveal" data-delay="80" style="border-color:rgba(240,101,79,.35);background:rgba(240,101,79,.04)">
+          <h4 style="color:#b8402c">实验事故专线（24 小时）</h4>
+          <ul class="side-list">
+            <li><span class="k">专线代号</span><span class="v mono">AS-3 · 值班主管</span></li>
+            <li><span class="k">适用情形</span><span class="v">受试者受伤、被惊醒且记忆残留、梦境崩坏、PE 归零后未恢复意识</span></li>
+            <li><span class="k">须提供</span><span class="v">序列编号、站点代号、在场人员</span></li>
+          </ul>
+        </div>
+
+        <div class="side-block reveal" data-delay="160">
+          <h4>递交前自查</h4>
+          <ul class="side-list">
+            <li><span class="k">01</span><span class="v">是否已查询过《梦境解析导论》常见问题？</span></li>
+            <li><span class="k">02</span><span class="v">是否引用了具体条目而非印象？</span></li>
+            <li><span class="k">03</span><span class="v">是否已隐去他人身份信息？</span></li>
+            <li><span class="k">04</span><span class="v">入所申请是否选对了类别？</span></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 受理流程 ============================ -->
+<section class="section section--alt" id="process">
+  <div class="wrap--narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">Intake Process</span>
+      <h2>受理<span class="thin">流程</span></h2>
+      <p>一份反馈从递交到结案，会经过以下五个节点。除匿名件外，你可以在任一节点凭受理编号查询进度。</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step" data-accent="cyan">
+        <span class="step__no">01</span>
+        <div>
+          <h3>编号归档 <span class="en">Logging</span></h3>
+          <p>档案与数据部为每一份反馈生成一个不可回收的受理编号，并记录递交时间与本机留存的联系方式。</p>
+        </div>
+      </div>
+      <div class="step" data-accent="violet">
+        <span class="step__no">02</span>
+        <div>
+          <h3>分类分派 <span class="en">Routing</span></h3>
+          <p>伦理与合规部按类别分派：规则与平衡 → 脑科学与心理研究部；实验事故 → 潜梦者管理部与运维部；伦理申诉 → 合规部直接受理。</p>
+        </div>
+      </div>
+      <div class="step" data-accent="lime">
+        <span class="step__no">03</span>
+        <div>
+          <h3>事实核对 <span class="en">Verification</span></h3>
+          <p>承办部门调阅相关序列档案与观测记录进行核对。此环节不与递交人直接沟通，除非需要补充关键信息。</p>
+        </div>
+      </div>
+      <div class="step" data-accent="amber">
+        <span class="step__no">04</span>
+        <div>
+          <h3>答复或处置 <span class="en">Response</span></h3>
+          <p>给出结论、说明理由，或提出处置方案。若涉及规则修订，会一并说明下一版规则的调整方向。</p>
+        </div>
+      </div>
+      <div class="step" data-accent="magenta">
+        <span class="step__no">05</span>
+        <div>
+          <h3>结案与回访 <span class="en">Closure</span></h3>
+          <p>结案后，涉及事故与伦理类的反馈将在 30 日内进行回访，确认处置是否已实际生效。这一环节由合规部独立完成，承办部门无权取消。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice mt-l reveal">
+      <svg class="notice__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <div>
+        <h4>一个诚实的说明</h4>
+        <p>规则与平衡类的反馈，从递交到实际改动规则，通常需要跨越两个版本周期。这不代表你的意见被搁置——所有已受理的反馈都会进入《修订意见池》，并在公开年报中按类别汇总公布数量。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 联系方式 ============================ -->
+<section class="section" id="channels">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Contact Channels</span>
+      <h2>联系<span class="thin">方式</span></h2>
+      <p>不同的事找不同的入口。投错入口是申请与反馈被退回的最主要原因。</p>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table>
+        <thead>
+          <tr><th>事项</th><th>入口 / 渠道</th><th>承诺时限</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>规则与平衡问题</strong></td>
+            <td class="mono">本页反馈表单</td>
+            <td>5 个工作日</td>
+            <td>请引用具体条目</td>
+          </tr>
+          <tr>
+            <td><strong>梦境设定与背景建议</strong></td>
+            <td class="mono">本页反馈表单</td>
+            <td>5 个工作日</td>
+            <td>欢迎说明你的推演依据</td>
+          </tr>
+          <tr>
+            <td><strong>实验事故报告</strong></td>
+            <td class="mono">事故专线 AS-3<br>＋ 本页反馈表单（选「事故级」）</td>
+            <td>立即 / 24 小时</td>
+            <td>先打电话，再补表单</td>
+          </tr>
+          <tr>
+            <td><strong>伦理申诉</strong></td>
+            <td class="mono">合规部直收 · 可匿名</td>
+            <td>15 个工作日</td>
+            <td>合规部独立于承办部门</td>
+          </tr>
+          <tr>
+            <td><strong>入所申请转交</strong></td>
+            <td class="mono">本页反馈表单 · 选对应类别</td>
+            <td>7 个工作日</td>
+            <td>详见<a class="link-arrow" href="admissions.html#apply" style="color:var(--accent)">招生简章</a></td>
+          </tr>
+          <tr>
+            <td><strong>受试者撤回授权</strong></td>
+            <td class="mono">本页反馈表单 · 选「伦理申诉」</td>
+            <td>24 小时内生效</td>
+            <td>撤回无需说明理由</td>
+          </tr>
+          <tr>
+            <td><strong>媒体与公众咨询</strong></td>
+            <td class="mono">综合咨询窗口</td>
+            <td>10 个工作日</td>
+            <td>涉及时序序列的问题不予答复</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid grid--3 mt-l">
+      <div class="card reveal" data-accent="cyan">
+        <span class="card__index">CH / 01</span>
+        <h3>综合咨询窗口</h3>
+        <p>接待时间：工作日 09:00—18:00。可咨询招募进度、公开年报索取与科普材料申请。</p>
+        <div class="card__meta"><span class="chip mono">窗口编号 W-01</span></div>
+      </div>
+      <div class="card reveal" data-delay="80" data-accent="rose">
+        <span class="card__index">CH / 02</span>
+        <h3>实验事故专线</h3>
+        <p>代号 AS-3，24 小时由现场值班主管接听。请先报序列编号与站点代号，再描述现场情况。</p>
+        <div class="card__meta"><span class="chip mono">AS-3</span><span class="chip">24 h</span></div>
+      </div>
+      <div class="card reveal" data-delay="160" data-accent="violet">
+        <span class="card__index">CH / 03</span>
+        <h3>档案调阅申请</h3>
+        <p>在册成员可申请调阅与本序列相关的观测记录。审批由档案与数据部执行，通常需 3—5 个工作日。</p>
+        <div class="card__meta"><span class="chip">需 ID 卡</span><span class="chip">留痕</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 行为准则 ============================ -->
+<section class="section section--alt" id="conduct">
+  <div class="wrap--narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">Feedback Conduct</span>
+      <h2>递交反馈时的<span class="thin">行为准则</span></h2>
+      <p>反馈通道是研究所与公众之间最重要的界面，因此也有纪律。</p>
+    </div>
+
+    <div class="accordion reveal" data-exclusive>
+      <details class="acc" open>
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">01</span><span class="acc__title">不要把他人的梦写进来<span class="en">Privacy First</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>如果你要举例说明一个梦境现象，请使用自己的梦，或将所有可识别信息替换掉。姓名、相貌特征、具体地点、时间点与在场人员的组合，本身就构成身份信息。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">02</span><span class="acc__title">一次反馈只谈一件事<span class="en">One Issue Per Case</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>把三个不相干的问题塞进一份反馈，会导致它被拆成三份重新编号，实际上反而更慢。一次谈一件事，是最快的路径。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">03</span><span class="acc__title">事故类反馈：先止损，后记录<span class="en">Safety Before Paperwork</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>若现场仍有人处于危险中，请先拨打 AS-3 并执行现场处置流程，事后再补交反馈。任何以「先写好报告」为由延误处置的行为都会被追责。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">04</span><span class="acc__title">如实描述，包括你自己的失误<span class="en">Record Everything</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>报告中隐瞒自己的失误，比失误本身严重得多。观测记录的完整性高于研究者的体面——这一条同样适用于反馈。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">05</span><span class="acc__title">不要用反馈通道做潜入申请<span class="en">Wrong Channel</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>潜入申请必须通过对内序列系统提交，需附授权链与目的说明。从反馈通道递交的潜入申请会被直接退回，且不生成受理编号。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 隐私 ============================ -->
+<section class="section" id="ethics">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Privacy &amp; Consent</span>
+      <h2>知情同意<span class="thin">与隐私</span></h2>
+      <p>《反馈材料处理与隐私说明》的公开要点。</p>
+    </div>
+
+    <div class="grid grid--4">
+      <article class="card reveal" data-accent="cyan">
+        <span class="card__index">PV / 01</span>
+        <h3>保管标准</h3>
+        <p>反馈材料按受试者级标准保管，与观测记录同等级别，仅限承办人与合规部调阅。</p>
+      </article>
+      <article class="card reveal" data-delay="60" data-accent="violet">
+        <span class="card__index">PV / 02</span>
+        <h3>留存期限</h3>
+        <p>一般反馈结案后留存 2 年；涉事故与伦理类留存 10 年。你可随时申请提前销毁。</p>
+      </article>
+      <article class="card reveal" data-delay="120" data-accent="lime">
+        <span class="card__index">PV / 03</span>
+        <h3>匿名件处理</h3>
+        <p>匿名件仅记录内容本体，不留存任何可识别信息，因此无法接收答复，也无法用于后续申诉。</p>
+      </article>
+      <article class="card reveal" data-delay="180" data-accent="amber">
+        <span class="card__index">PV / 04</span>
+        <h3>不被用于研究</h3>
+        <p>反馈材料不得作为观测样本或研究数据使用。若某份反馈具备研究价值，需另行取得你的书面同意。</p>
+      </article>
+    </div>
+
+    <div class="grid grid--2 mt-l" style="gap:clamp(24px,3vw,40px)">
+      <div class="notice reveal">
+        <svg class="notice__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6l-8-3Z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+        <div>
+          <h4>受试者的三项绝对权利</h4>
+          <p>① 随时无条件撤回授权，无需说明理由，24 小时内生效；② 要求销毁与其相关的全部观测记录；③ 要求当面陈述并在场旁听复核会议。这三项权利不可被任何项目进度、保密协议或上级指令覆盖。</p>
+        </div>
+      </div>
+      <div class="notice reveal" data-delay="120">
+        <svg class="notice__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <div>
+          <h4>本站的性质说明</h4>
+          <p>本站是 TRPG 作品《梦境旅客》的虚构设定站，用于跑团背景展示与剧情取材。页面上的表单不会向任何服务器发送数据，递交结果仅在你的浏览器内生成受理编号与回执。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section section--alt" id="faq">
+  <div class="wrap--narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">Feedback FAQ</span>
+      <h2>反馈<span class="thin">常见问题</span></h2>
+    </div>
+
+    <div class="accordion reveal" data-exclusive>
+      <details class="acc" open>
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">01</span><span class="acc__title">递交后多久能收到答复？<span class="en">Response time</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>普通件 5 个工作日内首次答复，加急件 48 小时内，事故级立即转现场值班主管。伦理申诉因需独立复核，承诺 15 个工作日内给出结论。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">02</span><span class="acc__title">匿名递交还能追问进度吗？<span class="en">Anonymous follow-up</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>不能。匿名件不保留任何可识别信息，所以无法建立往来。若你需要后续沟通，请选择具名递交，或仅填写一个专用邮箱。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">03</span><span class="acc__title">我提的规则问题真的会被改吗？<span class="en">Will rules change</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>会，但慢。所有已受理的反馈都会进入《修订意见池》，按类别汇总数量并在公开年报中公布。从递交到实际改动规则，通常需要跨越两个版本周期。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">04</span><span class="acc__title">我怀疑有成员违规潜梦，怎么举报？<span class="en">Report misconduct</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>请选择「伦理申诉」类别，合规部将独立受理，不经由被举报人所在部门。你可以匿名，但若能提供序列编号或时间地点，核查会快得多。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">05</span><span class="acc__title">为什么我的入所申请被退回了？<span class="en">Application returned</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>最常见的原因是投错了入口——入所申请必须选择「入所申请转交」类别。其次是材料不全，缺少那份不超过 800 字的自述。这两种情况都不会被记入档案。</p></div>
+      </details>
+      <details class="acc">
+        <summary class="acc__head" style="list-style:none"><span class="acc__num">06</span><span class="acc__title">我可以投诉某个部门本身吗？<span class="en">Complain about a department</span></span><span class="acc__ico" aria-hidden="true"></span></summary>
+        <div class="acc__body"><p>可以。选择「伦理申诉」，并在正文中说明是流程问题还是人员行为。合规部对全所所有部门（包括潜梦者管理部与装备研发部）均有权要求整改，仅时序序列除外——涉及时序序列的申诉由另一套内部机制处理。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div class="cta-band__inner">
+        <span class="eyebrow">Thank You</span>
+        <h2>谢谢你愿意把问题写下来</h2>
+        <p>研究所最引以为傲的不是设备，而是那套让每一次观测都能被复核的记录体系。你的反馈，是这套体系伸向外部的部分。</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--primary" href="#form">回到表单
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="dream-science.html">阅读梦境科普</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14.2" stroke="currentColor" stroke-width="1.1" opacity=".28"/><path d="M6.4 16h19.2" stroke="currentColor" stroke-width="1.1" opacity=".45"/><circle cx="16" cy="16" r="4.1" fill="currentColor"/></svg>
+          <span class="brand__text">
+            <span class="brand__cn">梦境研究所</span>
+            <span class="brand__en">Dream Research Institute</span>
+          </span>
+        </a>
+        <p>以观测为原则，研究梦境的运行逻辑，探索大脑与思维的奥秘，并将梦境研究与传统行业结合。</p>
+        <p class="tiny mono mt-s" style="letter-spacing:.08em">OBSERVATION · RESTRAINT · COMPLIANCE</p>
+      </div>
+      <div>
+        <h5>研究所</h5>
+        <ul>
+          <li><a href="about.html">概况与沿革</a></li>
+          <li><a href="about.html#departments">组织架构</a></li>
+          <li><a href="about.html#devices">装备一览</a></li>
+          <li><a href="about.html#stations">观测站网络</a></li>
+          <li><a href="about.html#temporal">时序研究部</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>加入与学习</h5>
+        <ul>
+          <li><a href="admissions.html">招生简章</a></li>
+          <li><a href="admissions.html#tracks">招募条线</a></li>
+          <li><a href="admissions.html#process">入所流程</a></li>
+          <li><a href="dream-science.html">梦境科普</a></li>
+          <li><a href="dream-science.html#abilities">梦境异能</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>联系与合规</h5>
+        <ul>
+          <li><a href="feedback.html">反馈通道</a></li>
+          <li><a href="feedback.html#channels">联系方式</a></li>
+          <li><a href="feedback.html#ethics">知情同意</a></li>
+          <li><a href="feedback.html#conduct">行为准则</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> 梦境研究所 Dream Research Institute. 本站为 TRPG 作品《梦境旅客》的虚构设定站。</span>
+      <span class="footer__legal">
+        <span class="mono">CONFIDENTIALITY / LEVEL-2</span>
+        <span class="mono">BUILD 1.2</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

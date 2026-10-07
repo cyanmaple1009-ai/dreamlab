@@ -54,3 +54,11 @@ target/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ---- 本地校验产物（不提交） ----
+_preview/
+_frozen-*.html
+_dump.txt
+
+# ---- 原作设定稿（本地素材，不提交到公开仓库） ----
+梦境旅客*.docx
