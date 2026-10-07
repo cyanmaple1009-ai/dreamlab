@@ -3,6 +3,46 @@
 TRPG 作品《梦境旅客》中「梦境研究所」的官方网站，纯静态、零依赖。
 直接双击 `index.html` 即可在浏览器中查看，也可以整体托管到 GitHub Pages / 任意静态空间。
 
+**线上地址：<https://cyanmaple1009-ai.github.io/dreamlab/>**
+
+---
+
+## 发布方式（GitHub Pages）
+
+| 项目 | 值 |
+|---|---|
+| 仓库 | `cyanmaple1009-ai/dreamlab`（public） |
+| 源分支 | `gh-pages`，路径 `/` |
+| 站点源文件 | 在 `main` 分支的 `dream-lab-site/` 目录 |
+| 构建方式 | legacy（无需 Actions） |
+
+`gh-pages` 分支的内容等于 `main` 分支里 `dream-lab-site/` 目录的 tree，因此站点根目录下就是
+`index.html` 与 `assets/`，URL 形如 `https://cyanmaple1009-ai.github.io/dreamlab/about.html`。
+
+### 更新站点的流程
+
+改完 `main` 里的站点文件后，把 `dream-lab-site` 的 tree 重新发到 `gh-pages`：
+
+```powershell
+cd 'C:\Project\Dream Lab'
+git add dream-lab-site && git commit -m "更新站点"
+git push origin main
+
+# 用站点目录的 tree 生成一次 gh-pages 提交（不切换分支、不污染工作区）
+$tree = git rev-parse main:dream-lab-site
+$env:GIT_INDEX_FILE = "$env:TEMP\ghpages-index"
+git read-tree $tree
+$c = git commit-tree $tree -m "publish: 更新站点"
+Remove-Item Env:\GIT_INDEX_FILE
+git update-ref refs/heads/gh-pages $c
+git push origin gh-pages
+```
+
+推送后 Pages 会自动重建（通常 1 分钟内）。
+
+> 注意：`gh-pages` 是一次性快照，**不要**在它上面继续开发；
+> 所有改动都提交到 `main`，再用上面的方式重新发布。
+
 ---
 
 ## 页面结构
